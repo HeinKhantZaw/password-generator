@@ -1,0 +1,68 @@
+{% load static %}<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+<div class="jumbotron d-flex align-items-center" style="margin-bottom: 0;
+background-color:transparent !important;">
+    <div class=" container card vertical-center p-4">
+        <h3 class="card-title">
+            <div id="LogoText" class="text-center">Python Password Generator</div>
+        </h3>
+        <form action="" method="get" style="margin-bottom: 20px">
+            <div id="sec_options" class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Password Length:</td>
+                            <td><input class="col-md-4" type="number" id="pgLength"></td>
+                        </tr>
+                        <tr>
+                            <td>Include Numbers (1234):</td>
+                            <td><input type="checkbox" name="Numbers" id="Numbers"
+                            ></td>
+                        </tr>
+                        <tr>
+                            <td>Include Lowercase Characters (abcd)</td>
+                            <td><input type="checkbox" name="Lowercase" id="Lowercase">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Include Uppercase Characters (ABCD)</td>
+                            <td><input type="checkbox" name="Uppercase" id="Uppercase"
+                            ></td>
+                        </tr>
+                        <tr>
+                            <td>Include Unique Characters:</td>
+                            <td><input type="checkbox" name="Unique"
+                                       id="Unique"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="sec_btn" class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary">Generate Password</button>
+            </div>
+        </form>
+        <div class="row">
+
+            <h4 class="col-md-4">Generated Password:</h4>
+            <textarea class="col-md-4"></textarea>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn-primary btn m-2"> Copy password</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
