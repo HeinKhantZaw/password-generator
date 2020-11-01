@@ -1,0 +1,97 @@
+{% load static %}<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+<section>
+    <div class="container modern-form">
+        <div class="text-center">
+            <h4 style="color: #212529;font-size: 33px;">Password Generator</h4>
+            <hr class="modern-form__hr" style="width: 190px;">
+        </div>
+        <div class="modern-form__form-container"
+             style="padding: 10px;padding-top: 10px;padding-right: 0;padding-bottom: 0;padding-left: 0;">
+            <form style="text-align: center;">
+                <div class="form-row">
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-r">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;"><label>Password Length :</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-l">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;"><input
+                                    class="border rounded form-control" type="number" name="pwLength" required=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-r">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;">
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"
+                                                               name="uppercase"><label class="form-check-label"
+                                                                                       for="formCheck-2">Include
+                                    Uppercase Letters</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-r">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;">
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"
+                                                               name="lowercase"><label
+                                        class="form-check-label text-center" for="formCheck-2">Include Lowercase
+                                    Letters</label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-r">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;">
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"
+                                                               name="number"><label class="form-check-label"
+                                                                                    for="formCheck-2">Include Numerical
+                                    Values</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-contact">
+                        <div class="form-group modern-form__form-group--padding-r">
+                            <div class="line-box" style="margin: 0px;margin-top: 10px;">
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"
+                                                               name="unique"><label class="form-check-label text-center"
+                                                                                    for="formCheck-2">Include Unique
+                                    Characters</label></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col text-center">
+                        <button class="btn btn-primary submit-now" type="submit" style="background: rgb(76,170,222);">
+                            Generate Password
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+</body>
+
+</html>
