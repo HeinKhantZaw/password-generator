@@ -3,7 +3,6 @@ from zxcvbn import zxcvbn
 import random, string
 
 
-# Create your views here.
 def home(req):
     return render(req, 'index.html')
 
@@ -25,6 +24,8 @@ def password(request):
         password_char += string.ascii_lowercase
     if request.GET.get('number'):
         password_char += string.digits
+    if request.GET.get('special_characters'):
+        password_char += string.punctuation
     for x in range(password_length):
         password += random.choice(password_char)
     strength = zxcvbn(password)
